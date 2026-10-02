@@ -1,0 +1,85 @@
+/* Import Tailwind v4 */
+@import "tailwindcss";
+
+/* Design Tokens — Material 3 color palette LaundryKost */
+@theme {
+  --color-primary: #006194;
+  --color-on-primary: #ffffff;
+  --color-primary-container: #007bb9;
+  --color-primary-fixed: #cce5ff;
+  --color-on-primary-fixed: #001d31;
+  --color-secondary: #565e74;
+  --color-on-secondary: #ffffff;
+  --color-secondary-container: #dae2fd;
+  --color-on-secondary-container: #5c647a;
+  --color-tertiary: #00685f;
+  --color-on-tertiary: #ffffff;
+  --color-tertiary-fixed: #89f5e7;
+  --color-on-tertiary-fixed: #00201d;
+  --color-error: #ba1a1a;
+  --color-on-error: #ffffff;
+  --color-error-container: #ffdad6;
+  --color-background: #f7f9fb;
+  --color-on-background: #191c1e;
+  --color-surface: #f7f9fb;
+  --color-on-surface: #191c1e;
+  --color-surface-variant: #e0e3e5;
+  --color-on-surface-variant: #3f4850;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-low: #f2f4f6;
+  --color-surface-container: #eceef0;
+  --color-surface-container-high: #e6e8ea;
+  --color-surface-container-highest: #e0e3e5;
+  --color-outline: #707881;
+  --color-outline-variant: #bfc7d2;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overscroll-behavior-y: none;
+  -webkit-font-smoothing: antialiased;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background-color: #f7f9fb;
+  color: #191c1e;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+::selection {
+  background-color: #cce5ff;
+  color: #001d31;
+}
+
+h1, h2, h3 { text-wrap: balance; margin: 0; }
+p, li { text-wrap: pretty; margin: 0; }
+
+:focus-visible {
+  outline: 2px solid #006194;
+  outline-offset: 2px;
+  border-radius: 0.25rem;
+}
+
+img { max-width: 100%; height: auto; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
