@@ -1,42 +1,66 @@
-// Komponen ServiceCard — kartu layanan reusable
+import SpotlightCard from "./reactbits/SpotlightCard";
+
+// Komponen ServiceCard — kartu layanan modern ditenagai oleh React Bits SpotlightCard
 // Menerima props: title, description, price, unit, duration, icon, badge
 const ServiceCard = ({ title, description, price, unit, duration, icon, badge }) => {
-  const isPrimary = badge;
+  const isPrimary = !!badge;
 
   return (
-    <article className="relative flex flex-col justify-between rounded-2xl bg-white p-6 shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden">
-      {/* Badge "Favorit" — conditional rendering jika ada badge */}
-      {badge && (
-        <div className="absolute top-0 right-0 bg-[#006194] text-white px-3 py-1 rounded-bl-xl text-[11px] font-bold uppercase tracking-wider">
-          {badge}
-        </div>
-      )}
+    <SpotlightCard
+      spotlightColor={isPrimary ? "rgba(0, 97, 148, 0.25)" : "rgba(86, 94, 116, 0.15)"}
+      className={`group h-full transition-all duration-300 hover:-translate-y-1 hover:shadow-xl ${
+        isPrimary ? "border-[#006194]/30 shadow-md" : "border-[#e0e3e5] shadow-sm"
+      }`}
+    >
+      <div className="relative flex h-full min-h-[350px] flex-col justify-between p-5 sm:min-h-[370px] sm:p-6">
+        {/* Badge "Favorit" */}
+        {badge && (
+          <div className="absolute right-4 top-4 rounded-full border border-[#cce5ff] bg-[#eaf5fb] px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-[#006194]">
+            {badge}
+          </div>
+        )}
 
-      {/* Ikon layanan */}
-      <div className="flex flex-col gap-3">
-        <div className={`w-14 h-14 rounded-2xl flex items-center justify-center text-3xl mb-2 ${isPrimary ? "bg-[#cce5ff]" : "bg-[#dae2fd]"}`}>
-          {icon}
+        {/* Content Top */}
+        <div className="flex flex-col gap-3">
+          <div
+            className={`mb-1 flex h-14 w-14 items-center justify-center rounded-2xl text-3xl shadow-sm transition-transform duration-300 group-hover:scale-110 group-hover:rotate-6 ${
+              isPrimary ? "bg-gradient-to-br from-[#cce5ff] to-[#e4f8f6] text-[#006194]" : "bg-gradient-to-br from-[#e6f2f8] to-[#e9ebfb] text-[#006194]"
+            }`}
+          >
+            {icon}
+          </div>
+
+          <h3 className="text-lg font-extrabold text-[#191c1e] transition-colors group-hover:text-[#006194] sm:text-xl">
+            {title}
+          </h3>
+          <p className="text-sm leading-relaxed text-[#53606a]">
+            {description}
+          </p>
         </div>
 
-        {/* Judul & deskripsi — dari props */}
-        <h3 className="text-lg font-bold text-[#191c1e]">{title}</h3>
-        <p className="text-sm text-[#3f4850]">{description}</p>
+        {/* Price & Duration */}
+        <div
+          className={`mt-6 flex flex-wrap items-center justify-between gap-3 rounded-2xl border px-4 py-4 transition-colors ${
+            isPrimary ? "border-[#cce5ff] bg-[#eaf5fb]/80" : "border-[#e4eaee] bg-[#f6f9fa]"
+          }`}
+        >
+          <div>
+            <span
+              className={`block text-2xl font-extrabold leading-tight tracking-tight ${
+                isPrimary ? "text-[#006194]" : "text-[#191c1e]"
+              }`}
+            >
+              {price}
+            </span>
+            <span className="mt-1 block text-[11px] text-[#65727b]">{unit}</span>
+          </div>
+          <div className="flex shrink-0 items-center gap-1.5 rounded-full border border-white/80 bg-white/80 px-2.5 py-1.5 text-[11px] font-semibold text-[#53606a] shadow-sm">
+            <span aria-hidden="true">⏱</span>
+            <span>{duration}</span>
+          </div>
+        </div>
       </div>
-
-      {/* Harga & durasi */}
-      <div className={`mt-4 rounded-xl px-4 py-3 flex items-center justify-between ${isPrimary ? "bg-[#cce5ff]/30" : "bg-[#f2f4f6]/80"}`}>
-        <div>
-          <span className={`text-2xl font-extrabold leading-tight ${isPrimary ? "text-[#006194]" : "text-[#191c1e]"}`}>
-            {price}
-          </span>
-          <span className="text-xs text-[#3f4850]"> {unit}</span>
-        </div>
-        <div className="flex items-center gap-1 text-[#3f4850]">
-          <span>⏱</span>
-          <span className="text-xs font-semibold">{duration}</span>
-        </div>
-      </div>
-    </article>
+    </SpotlightCard>
   );
 };
 

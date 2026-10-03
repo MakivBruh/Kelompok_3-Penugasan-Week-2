@@ -2,10 +2,10 @@
 // Menerima props: title, quota, price, unit, desc, features (array), highlight, badge, waMsg
 const PackageCard = ({ title, quota, price, unit, desc, features, highlight, badge, waMsg }) => {
   return (
-    <article className={`relative flex flex-col justify-between rounded-2xl p-6 shadow-sm transition-all duration-200 ${
+    <article className={`relative flex h-full flex-col justify-between rounded-2xl border p-6 transition-all duration-300 hover:-translate-y-1 ${
       highlight
-        ? "bg-white shadow-xl lg:-translate-y-3"
-        : "bg-white hover:shadow-lg"
+        ? "border-[#006194]/20 bg-white shadow-[0_18px_50px_rgba(0,97,148,0.14)] lg:-translate-y-3 hover:shadow-[0_24px_60px_rgba(0,97,148,0.2)]"
+        : "border-[#e0e3e5] bg-white shadow-sm hover:border-[#006194]/20 hover:shadow-xl"
     }`}>
       {/* Badge "Paling Hemat" — conditional rendering */}
       {badge && (
