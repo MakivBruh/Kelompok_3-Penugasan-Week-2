@@ -2,6 +2,7 @@ import { Outlet, useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import ScrollProgress from "../components/ScrollProgress";
 import { useStickyScroll } from "../hooks/useStickyScroll";
 
 // Layout utama — Floating Island Navbar + <Outlet /> + Footer
@@ -22,6 +23,7 @@ const MainLayout = () => {
 
   return (
     <div className="flex min-h-screen flex-col bg-[#f7f9fb] selection:bg-[#cce5ff] selection:text-[#001d31]">
+      <ScrollProgress />
       <Navbar />
       {/* Outlet merender konten halaman aktif dengan padding sesuai letak island navbar */}
       <main className={`flex-1 w-full bg-[#f7f9fb] ${isHome ? "" : "pt-20"}`}>

@@ -17,7 +17,8 @@ Refactoring website LaundryKost dari HTML/CSS ke ReactJS menggunakan Vite, Tailw
 - Modal CTA interaktif
 - Form kontak dengan validasi + integrasi API POST
 - Data via props menggunakan `.map()`
-- Minimal 3 `useState`: mobile menu, modal, form state
+- Section simulasi mesin cuci interaktif dengan animasi drum berputar, gelombang air, gelembung busa, uap, dan running marquee ticker
+- Minimal 3 `useState`: mobile menu, modal, form state, simulator stage state
 
 ## Struktur Folder
 
@@ -26,6 +27,7 @@ src/
 ├── components/
 │   ├── Navbar.jsx
 │   ├── Hero.jsx
+│   ├── LaundrySimulator.jsx
 │   ├── ServiceCard.jsx
 │   ├── PackageCard.jsx
 │   ├── Modal.jsx
