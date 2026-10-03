@@ -69,5 +69,5 @@ npm run build
 
 ## Link
 
-- **Vercel:** https://laundrykost-kelompok.vercel.app *(update setelah deploy)*
-- **GitHub:** https://github.com/username/Kelompok_X-Penugasan-Week-2 *(update)*
+- **Vercel:** week2dev-x.vercel.app*
+- **GitHub:** [LaundryKost](https://github.com/MakivBruh/week2devX.git)
