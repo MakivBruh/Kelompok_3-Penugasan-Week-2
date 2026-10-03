@@ -205,43 +205,6 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Section Keunggulan */}
-      <section className="w-full bg-[#f7f9fb] px-4 py-12 sm:py-16 lg:px-14">
-        <div className="mx-auto max-w-7xl">
-          <div className="mx-auto mb-12 max-w-2xl text-center">
-            <FadeContent direction="down" distance={20} duration={600}>
-              <span className="text-xs font-bold uppercase tracking-wider text-[#006194] bg-[#dae2fd]/60 px-3 py-1 rounded-full">
-                Kenapa Kami?
-              </span>
-            </FadeContent>
-            <h2 className="mt-3 mb-2 text-3xl md:text-4xl font-extrabold text-[#191c1e]">
-              Mengapa Anak Kos Memilih Kami?
-            </h2>
-            <p className="text-base text-[#3f4850]">
-              Kami mengerti ritme hidup mahasiswa: jadwal kuliah padat, tugas menumpuk,
-              dan butuh pakaian selalu siap pakai.
-            </p>
-          </div>
-
-          {/* Grid 4 kartu keunggulan dengan SpotlightCard */}
-          <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
-            {features.map((feat) => (
-              <FadeContent key={feat.id} direction="up" distance={20} duration={600}>
-                <SpotlightCard
-                  spotlightColor="rgba(0, 97, 148, 0.15)"
-                  className="rounded-2xl p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg h-full"
-                >
-                  <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-[#cce5ff] text-2xl transition-transform duration-300 group-hover:scale-110">
-                    {feat.icon}
-                  </div>
-                  <h3 className="mb-2 text-base font-bold text-[#191c1e]">{feat.title}</h3>
-                  <p className="text-sm text-[#3f4850] leading-relaxed">{feat.desc}</p>
-                </SpotlightCard>
-              </FadeContent>
-            ))}
-          </div>
-        </div>
-      </section>
 
 
 
