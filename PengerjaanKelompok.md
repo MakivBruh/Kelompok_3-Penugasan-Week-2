@@ -19,7 +19,8 @@
 - Komponen `Navbar.jsx` — responsive + hamburger mobile
 - Komponen `Hero.jsx` — section utama dengan tombol modal
 - Komponen `ServiceCard.jsx` — kartu layanan reusable
-- Halaman `Home.jsx` — Hero + Keunggulan + Proses + CTA
+- Komponen `LaundrySimulator.jsx` — section simulasi mesin cuci dengan berbagai animasi interaktif
+- Halaman `Home.jsx` — Hero + Keunggulan + Simulasi Animasi + Proses + CTA
 - Halaman `Layanan.jsx` — grid kartu layanan
 
 ### Anggota 2

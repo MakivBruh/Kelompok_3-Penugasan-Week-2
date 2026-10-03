@@ -87,7 +87,7 @@ const ContactForm = () => {
       // Response lain
       setStatus("error");
       setApiMessage(data.message || "Terjadi kesalahan. Coba lagi nanti.");
-    } catch (err) {
+    } catch {
       setStatus("error");
       setApiMessage("Tidak dapat terhubung ke server. Periksa koneksi internet kamu.");
     } finally {
