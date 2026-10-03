@@ -271,7 +271,7 @@ const LaundrySimulator = () => {
                 {/* Tombol Dial / Knop Putar */}
                 <div className="relative flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-tr from-gray-700 to-gray-500 shadow-md border-2 border-gray-400">
                   <div
-                    className="h-6 w-1 rounded-full bg-cyan-300 transition-transform duration-500 origin-bottom"
+                    className="h-6 w-1 rounded-full bg-cyan-300 transition-transform duration-500 origin-center"
                     style={{
                       transform: `rotate(${
                         activeStageKey === "wash"
