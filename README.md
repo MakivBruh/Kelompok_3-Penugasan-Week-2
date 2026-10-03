@@ -69,5 +69,5 @@ npm run build
 
 ## Link
 
-- **Vercel:** week2dev-x.vercel.app
+- **Vercel:** [LaundryKost Vercel](week2dev-x.vercel.app)
 - **GitHub:** [LaundryKost](https://github.com/MakivBruh/week2devX.git)
