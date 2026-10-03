@@ -3,16 +3,11 @@ import { useEffect } from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import ScrollProgress from "../components/ScrollProgress";
-import { useStickyScroll } from "../hooks/useStickyScroll";
 
 // Layout utama — Floating Island Navbar + <Outlet /> + Footer
 // Scroll-to-top otomatis saat berpindah rute
-// Menggunakan useStickyScroll agar scroll terasa berbobot & tidak terlalu cepat
 const MainLayout = () => {
   const { pathname } = useLocation();
-
-  // Aktifkan inertia dampening / sticky scroll
-  useStickyScroll(0.6);
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });

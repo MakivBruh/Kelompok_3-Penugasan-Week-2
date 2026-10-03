@@ -231,7 +231,7 @@ const Hero = ({ title, subtitle, badge }) => {
         </div>
 
         {/* Scroll indicator */}
-        <a href="#layanan-unggulan" className="hero-scroll-cue absolute bottom-3 left-1/2 z-20 flex -translate-x-1/2 items-center gap-2 rounded-full border border-white/80 bg-white/65 px-3 py-1.5 text-[10px] font-bold uppercase tracking-[.18em] text-[#52616b] shadow-sm backdrop-blur-md transition hover:-translate-y-0.5 hover:bg-white sm:bottom-4 sm:flex-col sm:gap-1 sm:border-0 sm:bg-transparent sm:shadow-none" aria-label="Scroll ke layanan unggulan">
+        <a href="#keunggulan" className="hero-scroll-cue absolute bottom-3 left-1/2 z-20 flex -translate-x-1/2 items-center gap-2 rounded-full border border-white/80 bg-white/65 px-3 py-1.5 text-[10px] font-bold uppercase tracking-[.18em] text-[#52616b] shadow-sm backdrop-blur-md transition hover:-translate-y-0.5 hover:bg-white sm:bottom-4 sm:flex-col sm:gap-1 sm:border-0 sm:bg-transparent sm:shadow-none" aria-label="Scroll ke section keunggulan layanan">
           <span>Scroll</span>
           <svg className="hero-scroll-arrow h-4 w-4 sm:h-5 sm:w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
             <path d="M12 4v15m-6-6 6 6 6-6" />
