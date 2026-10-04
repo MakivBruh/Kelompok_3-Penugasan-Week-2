@@ -8,7 +8,7 @@
 
 | Nama                       | NIM          | Peran                                                             |
 | -------------------------- | ------------ | ----------------------------------------------------------------- |
-| [Moch. Makiv Fazlurrahman] | [2605]       | Setup Vite + Tailwind, Hero, Loading Screen, Modal, Deploy Vercel |
+| [Moch. Makiv Fazlurrahman] | [2605090028] | Setup Vite + Tailwind, Hero, Loading Screen, Modal, Deploy Vercel |
 | [Galang Radit Perdana]     | [2604130192] | Komponen ContactForm, Footer, Kontak, API                         |
 | [M.Rizki Firgiawan ]       | []           | Komponen Navbar, Layanan, Halaman Paket, NotFound                 |
 
