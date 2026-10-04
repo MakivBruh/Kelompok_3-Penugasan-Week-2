@@ -4,7 +4,8 @@ export const services = [
   {
     id: 1,
     title: "Cuci Kering",
-    description: "Cuci bersih dengan deterjen premium ramah serat kain dan dikeringkan higienis, siap langsung dilipat rapi.",
+    description:
+      "Cuci bersih dengan deterjen premium ramah serat kain dan dikeringkan higienis, siap langsung dilipat rapi.",
     price: "Rp7.000",
     unit: "per kilogram (kg)",
     duration: "2 hari kerja",
@@ -14,7 +15,8 @@ export const services = [
   {
     id: 2,
     title: "Cuci + Setrika",
-    description: "Pakaian dicuci wangi, dikeringkan, dan disetrika uap ekstra rapi — bebas kusut, siap langsung dipakai.",
+    description:
+      "Pakaian dicuci wangi, dikeringkan, dan disetrika uap ekstra rapi — bebas kusut, siap langsung dipakai.",
     price: "Rp9.000",
     unit: "per kilogram (kg)",
     duration: "2-3 hari kerja",
@@ -25,7 +27,8 @@ export const services = [
   {
     id: 3,
     title: "Laundry Express",
-    description: "Pakaian darurat untuk seminar, magang, atau ujian besok? Selesai dalam hitungan jam tanpa kompromi.",
+    description:
+      "Pakaian darurat untuk seminar, magang, atau ujian besok? Selesai dalam hitungan jam tanpa kompromi.",
     price: "Rp15.000",
     unit: "per kilogram (kg)",
     duration: "6-12 jam",
@@ -35,7 +38,8 @@ export const services = [
   {
     id: 4,
     title: "Cuci Sepatu",
-    description: "Deep clean anti-bakteri dan kering sempurna. Sepatu kembali seperti baru.",
+    description:
+      "Deep clean anti-bakteri dan kering sempurna. Sepatu kembali seperti baru.",
     price: "Rp20.000",
     unit: "per pasang",
     duration: "1-2 hari",

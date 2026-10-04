@@ -34,9 +34,10 @@ const Navbar = () => {
       <nav
         className={`
           w-full max-w-3xl transition-all duration-500 ease-out
-          ${scrolled
-            ? "rounded-2xl bg-white/80 shadow-[0_8px_32px_rgba(0,0,0,0.08)] backdrop-blur-xl border border-[#e0e3e5]/60 px-4 py-2"
-            : "rounded-2xl bg-white/60 shadow-[0_4px_16px_rgba(0,0,0,0.04)] backdrop-blur-md border border-[#e0e3e5]/40 px-6 py-3"
+          ${
+            scrolled
+              ? "rounded-2xl bg-white/80 shadow-[0_8px_32px_rgba(0,0,0,0.08)] backdrop-blur-xl border border-[#e0e3e5]/60 px-4 py-2"
+              : "rounded-2xl bg-white/60 shadow-[0_4px_16px_rgba(0,0,0,0.04)] backdrop-blur-md border border-[#e0e3e5]/40 px-6 py-3"
           }
         `}
       >
@@ -58,7 +59,10 @@ const Navbar = () => {
           {/* Navigasi desktop */}
           <div className="hidden lg:flex" aria-label="Navigasi utama">
             <RubberSegment
-              items={navLinks.map((link) => ({ value: link.to, label: link.label }))}
+              items={navLinks.map((link) => ({
+                value: link.to,
+                label: link.label,
+              }))}
               value={location.pathname}
               onChange={(path) => navigate(path)}
               size="md"
@@ -75,7 +79,12 @@ const Navbar = () => {
 
           <div className="flex items-center gap-2">
             {/* Tombol CTA desktop */}
-            <Magnet padding={36} magnetStrength={7} wrapperClassName="hidden lg:inline-block" innerClassName="inline-block">
+            <Magnet
+              padding={36}
+              magnetStrength={7}
+              wrapperClassName="hidden lg:inline-block"
+              innerClassName="inline-block"
+            >
               <a
                 href="https://wa.me/6285643429736"
                 target="_blank"
@@ -84,7 +93,10 @@ const Navbar = () => {
               >
                 <span className="pointer-events-none absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/20 to-transparent transition-transform duration-700 group-hover:translate-x-full" />
                 <span className="relative">Pesan Laundry</span>
-                <ArrowUpRight className="relative h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" aria-hidden="true" />
+                <ArrowUpRight
+                  className="relative h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+                  aria-hidden="true"
+                />
               </a>
             </Magnet>
 
@@ -94,7 +106,12 @@ const Navbar = () => {
               onClick={() => setMobileOpen(!mobileOpen)}
               aria-label={mobileOpen ? "Tutup menu" : "Buka menu"}
             >
-              <span className="text-lg font-bold transition-transform duration-200" style={{ transform: mobileOpen ? 'rotate(90deg)' : 'rotate(0deg)' }}>
+              <span
+                className="text-lg font-bold transition-transform duration-200"
+                style={{
+                  transform: mobileOpen ? "rotate(90deg)" : "rotate(0deg)",
+                }}
+              >
                 {mobileOpen ? "✕" : "☰"}
               </span>
             </button>
@@ -104,7 +121,9 @@ const Navbar = () => {
         {/* Menu mobile — ditampilkan bersyarat saat mobileOpen true */}
         <div
           className={`lg:hidden overflow-hidden transition-all duration-300 ease-out ${
-            mobileOpen ? "max-h-[300px] opacity-100 mt-2" : "max-h-0 opacity-0 mt-0"
+            mobileOpen
+              ? "max-h-[300px] opacity-100 mt-2"
+              : "max-h-0 opacity-0 mt-0"
           }`}
         >
           <div className="border-t border-[#e0e3e5]/60 pt-2 pb-1">
@@ -141,7 +160,10 @@ const Navbar = () => {
                 >
                   <span className="pointer-events-none absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/20 to-transparent transition-transform duration-700 group-hover:translate-x-full" />
                   <span className="relative">Pesan Laundry</span>
-                  <ArrowUpRight className="relative h-4 w-4" aria-hidden="true" />
+                  <ArrowUpRight
+                    className="relative h-4 w-4"
+                    aria-hidden="true"
+                  />
                 </a>
               </Magnet>
             </nav>

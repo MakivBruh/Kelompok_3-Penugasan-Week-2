@@ -5,6 +5,7 @@ import BlurText from "../components/reactbits/BlurText";
 import GradientText from "../components/reactbits/GradientText";
 import FadeContent from "../components/reactbits/FadeContent";
 import SpotlightCard from "../components/reactbits/SpotlightCard";
+import { Info } from "lucide-react";
 
 // Halaman Layanan — Ditingkatkan sepenuhnya dengan React Bits animation suite
 const Layanan = () => {
@@ -15,21 +16,21 @@ const Layanan = () => {
         className="absolute inset-0 pointer-events-none opacity-[0.25]"
         style={{
           backgroundImage: `radial-gradient(circle, #bfc7d2 1px, transparent 1px)`,
-          backgroundSize: '24px 24px',
+          backgroundSize: "24px 24px",
         }}
       />
 
       <div className="relative mx-auto max-w-6xl flex flex-col items-center">
         {/* Header section dengan React Bits animations */}
-        <div className="text-center max-w-2xl mb-12">
-          <FadeContent direction="down" distance={20} duration={600}>
+        <div className="text-center max-w-2xl mb-12 ">
+          {/* <FadeContent direction="down" distance={20} duration={600}>
             <div className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-[#cce5ff]/80 text-[#001d31] mb-4 border border-[#cce5ff] shadow-xs backdrop-blur-xs">
               <span>🧺</span>
               <span className="text-xs font-bold uppercase tracking-wider">
                 Pilihan Layanan Terlengkap
               </span>
             </div>
-          </FadeContent>
+          </FadeContent> */}
 
           <h1 className="text-4xl md:text-5xl font-extrabold text-[#191c1e] mb-4">
             <SplitText
@@ -38,7 +39,7 @@ const Layanan = () => {
               className="inline-block"
             />{" "}
             <GradientText
-              colors={['#006194', '#007bb9', '#00685f', '#89f5e7', '#006194']}
+              colors={["#006194", "#007bb9", "#00685f", "#89f5e7", "#006194"]}
               animationSpeed={5}
               className="block mt-1 font-extrabold"
             >
@@ -78,7 +79,13 @@ const Layanan = () => {
         </div>
 
         {/* Catatan ramah anak kos dengan SpotlightCard */}
-        <FadeContent direction="up" distance={20} duration={800} threshold={0.1} className="w-full">
+        <FadeContent
+          direction="up"
+          distance={20}
+          duration={800}
+          threshold={0.1}
+          className="w-full"
+        >
           <SpotlightCard
             spotlightColor="rgba(0, 104, 95, 0.15)"
             className="w-full border-[#00685f]/20 bg-gradient-to-r from-[#dae2fd]/40 via-white/80 to-[#89f5e7]/20 p-5 shadow-sm backdrop-blur-xs"
@@ -86,15 +93,19 @@ const Layanan = () => {
             <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
               <div className="flex items-center gap-4">
                 <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-[#006194] text-white text-xl shadow-xs">
-                  ℹ️
+                  <Info />
                 </div>
                 <div>
                   <p className="text-sm font-semibold text-[#191c1e]">
-                    <strong className="font-bold text-[#006194]">Catatan Ramah Anak Kos:</strong>{" "}
-                    Tersedia timbangan digital transparan langsung di depan kamar kos & gratis antar-jemput!
+                    <strong className="font-bold text-[#006194]">
+                      Catatan Ramah Anak Kos:
+                    </strong>{" "}
+                    Tersedia timbangan digital transparan langsung di depan
+                    kamar kos & gratis antar-jemput!
                   </p>
                   <p className="text-xs text-[#565e74] mt-0.5">
-                    Garansi cuci ulang jika ada noda tertinggal atau aroma kurang segar.
+                    Garansi cuci ulang jika ada noda tertinggal atau aroma
+                    kurang segar.
                   </p>
                 </div>
               </div>

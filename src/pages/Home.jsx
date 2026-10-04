@@ -8,6 +8,7 @@ import GradientText from "../components/reactbits/GradientText";
 import FadeContent from "../components/reactbits/FadeContent";
 import SpotlightCard from "../components/reactbits/SpotlightCard";
 import LaundrySimulator from "../components/LaundrySimulator";
+import { Truck } from "lucide-react";
 
 // Halaman Beranda — menampilkan Hero 3D, Section Layanan Populer, Keunggulan, dan Proses
 const Home = () => {
@@ -15,8 +16,14 @@ const Home = () => {
     if (event.pointerType !== "mouse") return;
     const section = event.currentTarget;
     const bounds = section.getBoundingClientRect();
-    section.style.setProperty("--services-pointer-x", `${event.clientX - bounds.left}px`);
-    section.style.setProperty("--services-pointer-y", `${event.clientY - bounds.top}px`);
+    section.style.setProperty(
+      "--services-pointer-x",
+      `${event.clientX - bounds.left}px`,
+    );
+    section.style.setProperty(
+      "--services-pointer-y",
+      `${event.clientY - bounds.top}px`,
+    );
     section.dataset.servicesPointerActive = "true";
   };
 
@@ -30,7 +37,7 @@ const Home = () => {
       <Hero />
 
       {/* Section Keunggulan Layanan — satu viewport penuh dengan React Bits */}
-      <section
+      {/* <section
         id="keunggulan"
         className="relative flex h-[100svh] min-h-[680px] w-full items-center overflow-hidden bg-[#f7f9fb] px-4 py-10 sm:px-8 sm:py-12 lg:px-14"
       >
@@ -101,7 +108,7 @@ const Home = () => {
             </div>
           </FadeContent>
         </div>
-      </section>
+      </section> */}
 
       {/* Simulasi proses pencucian interaktif, diadaptasi dari hasil kolaborasi */}
       <LaundrySimulator />
@@ -113,26 +120,32 @@ const Home = () => {
         onPointerLeave={handleServicesPointerLeave}
         className="relative w-full scroll-mt-6 overflow-hidden bg-gradient-to-b from-white/40 via-[#f1f8fb] to-[#f7f9fb] px-4 py-16 sm:py-20 lg:px-14"
       >
-        <div className="services-cursor-glow pointer-events-none absolute inset-0" aria-hidden="true" />
+        <div
+          className="services-cursor-glow pointer-events-none absolute inset-0"
+          aria-hidden="true"
+        />
         {/* Pattern Background — subtle dot matrix */}
         <div
           className="pointer-events-none absolute inset-0 opacity-[0.22]"
           style={{
             backgroundImage: `radial-gradient(circle, #bfc7d2 1px, transparent 1px)`,
-            backgroundSize: '24px 24px',
+            backgroundSize: "24px 24px",
           }}
         />
 
-        <div aria-hidden="true" className="pointer-events-none absolute -right-28 top-14 h-72 w-72 rounded-full bg-[#cce5ff]/50 blur-3xl" />
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute -right-28 top-14 h-72 w-72 rounded-full bg-[#cce5ff]/50 blur-3xl"
+        />
         <div className="relative z-10 mx-auto max-w-7xl">
           <div className="mx-auto mb-10 max-w-3xl text-center sm:mb-12">
             <FadeContent direction="down" distance={20} duration={600}>
-              <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-[#cce5ff] bg-white/80 px-4 py-2 text-[#001d31] shadow-sm">
+              {/* <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-[#cce5ff] bg-white/80 px-4 py-2 text-[#001d31] shadow-sm">
                 <span aria-hidden="true">🧺</span>
                 <span className="text-xs font-bold uppercase tracking-wider">
                   Pilih yang kamu butuhkan
                 </span>
-              </div>
+              </div> */}
             </FadeContent>
 
             <h2 className="mb-3 text-3xl font-extrabold tracking-tight text-[#191c1e] sm:text-4xl lg:text-5xl">
@@ -171,7 +184,7 @@ const Home = () => {
           </div>
 
           {/* Grid kartu layanan dengan React Bits SpotlightCard & FadeContent */}
-          <div className="grid grid-cols-1 items-stretch gap-4 sm:grid-cols-2 sm:gap-5 xl:grid-cols-4">
+          {/* <div className="grid grid-cols-1 items-stretch gap-4 sm:grid-cols-2 sm:gap-5 xl:grid-cols-4">
             {services.map((svc) => (
               <FadeContent
                 key={svc.id}
@@ -191,22 +204,19 @@ const Home = () => {
                 />
               </FadeContent>
             ))}
-          </div>
+          </div> */}
 
           {/* CTA Lihat Semua Layanan */}
           <div className="mt-10 text-center">
             <Link
               to="/layanan"
-                className="inline-flex items-center gap-2 rounded-full border border-[#c8e0eb] bg-white px-6 py-3 text-sm font-bold text-[#006194] shadow-sm transition-all hover:-translate-y-0.5 hover:border-[#80c8d0] hover:bg-[#eaf7f8] hover:shadow-md active:scale-95"
+              className="inline-flex items-center gap-2 rounded-full border border-[#c8e0eb] bg-white px-6 py-3 text-sm font-bold text-[#006194] shadow-sm transition-all hover:-translate-y-0.5 hover:border-[#80c8d0] hover:bg-[#eaf7f8] hover:shadow-md active:scale-95"
             >
-              Lihat Selengkapnya di Halaman Layanan →
+              Lihat Semua Layanan →
             </Link>
           </div>
         </div>
       </section>
-
-
-
 
       {/* Section Proses / Alur */}
       <section className="w-full px-4 pb-12 sm:pb-16 lg:px-14">
@@ -221,10 +231,10 @@ const Home = () => {
                   Pantau Cucianmu Tanpa Cemas
                 </h2>
               </div>
-              <p className="max-w-md text-sm text-[#3f4850]">
-                Dari pengambilan di pintu kos sampai kembali terlipat rapi, pantau status
-                cucian via pesan WhatsApp interaktif.
-              </p>
+              {/* <p className="max-w-md text-sm text-[#3f4850]">
+                Dari pengambilan di pintu kos sampai kembali terlipat rapi,
+                pantau status cucian via pesan WhatsApp interaktif.
+              </p> */}
             </div>
 
             {/* 4 step alur */}
@@ -234,11 +244,15 @@ const Home = () => {
                   key={s.step}
                   className="flex items-center gap-4 rounded-2xl bg-white p-5 shadow-xs border border-[#e0e3e5]/60 transition-transform hover:-translate-y-0.5 hover:shadow-md"
                 >
-                  <div className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-xl text-sm font-bold text-white shadow-xs ${s.step === 4 ? "bg-[#00685f]" : "bg-[#006194]"}`}>
+                  <div
+                    className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-xl text-sm font-bold text-white shadow-xs ${s.step === 4 ? "bg-[#00685f]" : "bg-[#006194]"}`}
+                  >
                     {s.step}
                   </div>
                   <div>
-                    <p className="text-sm font-bold text-[#191c1e]">{s.title}</p>
+                    <p className="text-sm font-bold text-[#191c1e]">
+                      {s.title}
+                    </p>
                     <p className="text-xs text-[#3f4850]">{s.desc}</p>
                   </div>
                 </div>
@@ -260,8 +274,8 @@ const Home = () => {
                   Cucian Numpuk? Serahkan Pada Ahlinya!
                 </h2>
                 <p className="text-base text-[#cce5ff]">
-                  Pesan penjemputan sekarang, fokus kuliah dan santai bersama teman
-                  tanpa beban cucian kotor.
+                  Pesan penjemputan sekarang, fokus kuliah dan santai bersama
+                  teman tanpa beban cucian kotor.
                 </p>
               </div>
               <a
@@ -270,7 +284,7 @@ const Home = () => {
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 rounded-full bg-white px-7 py-3.5 text-sm font-bold text-[#006194] shadow-lg hover:bg-[#f2f4f6] hover:shadow-xl transition-all active:scale-95 hover:-translate-y-0.5"
               >
-                🚚 Jemput Cucian Saya Sekarang
+                <Truck /> Jemput Cucian Saya Sekarang
               </a>
             </div>
           </div>

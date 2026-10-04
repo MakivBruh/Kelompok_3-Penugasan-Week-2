@@ -27,7 +27,7 @@ export const packages = [
       "Bebas drop kapan saja (dicicil per 5kg)",
       "Gratis jemput & antar kosan",
       "Prioritas antrean mesin harian",
-      "Bonus cuci 1 pasang sepatu 🎁",
+      "Bonus cuci 1 pasang sepatu",
     ],
     highlight: true,
     badge: "Paling Hemat · Pilihan Mahasiswa",
