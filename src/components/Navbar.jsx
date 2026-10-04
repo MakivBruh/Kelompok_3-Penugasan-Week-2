@@ -81,7 +81,7 @@ const Navbar = () => {
             {/* Tombol CTA desktop */}
             <Magnet
               padding={36}
-              magnetStrength={7}
+              magnetStrength={4}
               wrapperClassName="hidden lg:inline-block"
               innerClassName="inline-block"
             >
@@ -127,7 +127,7 @@ const Navbar = () => {
           }`}
         >
           <div className="border-t border-[#e0e3e5]/60 pt-2 pb-1">
-            <nav className="flex flex-col gap-1" aria-label="Navigasi mobile">
+            <nav className="flex w-full min-w-0 flex-col gap-1" aria-label="Navigasi mobile">
               {navLinks.map((link) => (
                 <NavLink
                   key={link.to}
@@ -145,27 +145,19 @@ const Navbar = () => {
                   {link.label}
                 </NavLink>
               ))}
-              <Magnet
-                padding={24}
-                magnetStrength={8}
-                wrapperClassName="mt-1 w-full"
-                innerClassName="w-full"
-                style={{ display: "block", width: "100%" }}
+              <a
+                href="https://wa.me/6285643429736"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group relative mt-1 box-border flex w-full max-w-[220px] min-w-0 self-center items-center justify-center gap-1.5 overflow-hidden rounded-xl bg-gradient-to-r from-[#006194] via-[#007bb9] to-[#00685f] px-3 py-2 text-center text-xs font-bold text-white shadow-md transition-all active:scale-[0.98]"
               >
-                <a
-                  href="https://wa.me/6285643429736"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group relative flex w-full items-center justify-center gap-1.5 overflow-hidden rounded-xl bg-gradient-to-r from-[#006194] via-[#007bb9] to-[#00685f] px-4 py-2.5 text-center text-sm font-bold text-white shadow-md transition-all active:scale-[0.98]"
-                >
-                  <span className="pointer-events-none absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/20 to-transparent transition-transform duration-700 group-hover:translate-x-full" />
-                  <span className="relative">Pesan Laundry</span>
-                  <ArrowUpRight
-                    className="relative h-4 w-4"
-                    aria-hidden="true"
-                  />
-                </a>
-              </Magnet>
+                <span className="pointer-events-none absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/20 to-transparent transition-transform duration-700 group-hover:translate-x-full" />
+                <span className="relative">Pesan Laundry</span>
+                <ArrowUpRight
+                  className="relative h-4 w-4"
+                  aria-hidden="true"
+                />
+              </a>
             </nav>
           </div>
         </div>
