@@ -10,7 +10,7 @@
 | -------------------------- | ------------ | ----------------------------------------------------------------- |
 | [Moch. Makiv Fazlurrahman] | [2605090028] | Setup Vite + Tailwind, Hero, Loading Screen, Modal, Deploy Vercel |
 | [Galang Radit Perdana]     | [2604130192] | Komponen ContactForm, Footer, Kontak, API                         |
-| [M.Rizki Firgiawan ]       | []           | Komponen Navbar, Layanan, Halaman Paket, NotFound                 |
+| [M.Rizki Firgiawan ]       | [2505090033] | Komponen Navbar, Layanan, Halaman Paket, NotFound                 |
 
 ## Pembagian Tugas Detail
 
