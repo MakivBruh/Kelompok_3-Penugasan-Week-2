@@ -31,8 +31,8 @@ const groupInfo = {
       name: "M. Rizki Firgiawan",
       id: "2505090033",
       socials: [
-        { platform: "Instagram", url: "" },
-        { platform: "LinkedIn", url: "" },
+        { platform: "Instagram", url: "https://www.instagram.com/mhmdrzkyyfrg08__" },
+        { platform: "LinkedIn", url: "https://www.linkedin.com/in/m-rizki-firgiawan-87679a20a" },
         { platform: "GitHub", url: "https://github.com/rizkik008" },
       ],
       whatsapp: "6285860001377",
